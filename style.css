@@ -24,13 +24,19 @@ img, svg {
     max-width: 300px;
     max-height: 80vh;
     transition: transform 0.3s ease-in-out;
-    animation: wiggle 1s infinite ease-in-out alternate; /* Wiggle animation */
+    animation: wiggle 0.5s infinite ease-in-out alternate; /* Faster for mobile */
 }
 
 /* Define the wiggle motion */
 @keyframes wiggle {
-    0% { transform: rotate(-3deg); } /* Slight tilt left */
-    100% { transform: rotate(3deg); } /* Slight tilt right */
+    0% { transform: rotate(-2deg); } /* Slight tilt left */
+    100% { transform: rotate(2deg); } /* Slight tilt right */
+}
+
+@media (max-width: 600px) {
+    img, svg {
+        animation: wiggle 0.4s infinite ease-in-out alternate; /* Even faster for mobile */
+    }
 }
 
 /* Hover effect */
