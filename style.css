@@ -17,13 +17,20 @@ body {
     text-align: center; /* Ensure text stays centered */
 }
 
-/* Style the pigeon */
+/* Apply animation to pigeon */
 img, svg {
-    width: 50vw; /* Responsive size */
+    width: 50vw;
     height: auto;
-    max-width: 300px; /* Prevents it from being too big */
+    max-width: 300px;
     max-height: 80vh;
     transition: transform 0.3s ease-in-out;
+    animation: wiggle 1s infinite ease-in-out alternate; /* Wiggle animation */
+}
+
+/* Define the wiggle motion */
+@keyframes wiggle {
+    0% { transform: rotate(-3deg); } /* Slight tilt left */
+    100% { transform: rotate(3deg); } /* Slight tilt right */
 }
 
 /* Hover effect */
